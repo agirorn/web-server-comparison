@@ -29,9 +29,12 @@ There wew 2 tests performed.
 | rust releas | 681023      | 3.800           | 547.55% |
 
 
-# WRK number
+# WRK numbers
 
 ## Node
+
+```bash
+wrk -t6 -c400 -d30s http://127.0.0.1:3000/hello-world
 
 Running 30s test @ http://127.0.0.1:3000/hello-world
   6 threads and 400 connections
@@ -42,8 +45,12 @@ Running 30s test @ http://127.0.0.1:3000/hello-world
   Socket errors: connect 149, read 114, write 0, timeout 0
 Requests/sec:   4141.69
 Transfer/sec:      0.94MB
+```
 
 ## Rust debug
+
+```bash
+wrk -t6 -c400 -d30s http://127.0.0.1:3000/hello-world
 
 Running 30s test @ http://127.0.0.1:3000/hello-world
   6 threads and 400 connections
@@ -54,8 +61,12 @@ Running 30s test @ http://127.0.0.1:3000/hello-world
   Socket errors: connect 149, read 97, write 0, timeout 0
 Requests/sec:   7507.17
 Transfer/sec:      0.93MB
+```
 
 ## Rust production
+
+```bash
+wrk -t6 -c400 -d30s http://127.0.0.1:3000/hello-world
 
 Running 30s test @ http://127.0.0.1:3000/hello-world
   6 threads and 400 connections
@@ -66,3 +77,4 @@ Running 30s test @ http://127.0.0.1:3000/hello-world
   Socket errors: connect 149, read 122, write 0, timeout 0
 Requests/sec:  22692.10
 Transfer/sec:      2.81MB
+```
