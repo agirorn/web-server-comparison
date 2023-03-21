@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=blanko
+    volumes:
+      - ./sql/create_dbs.sql:/docker-entrypoint-initdb.d/create_dbs.sql

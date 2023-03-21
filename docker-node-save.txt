@@ -1,0 +1,38 @@
+
+          /\      |‾‾| /‾‾/   /‾‾/   
+     /\  /  \     |  |/  /   /  /    
+    /  \/    \    |     (   /   ‾‾\  
+   /          \   |  |\  \ |  (‾)  | 
+  / __________ \  |__| \__\ \_____/ .io
+
+  execution: local
+     script: k6-save.js
+     output: -
+
+  scenarios: (100.00%) 1 scenario, 400 max VUs, 1m0s max duration (incl. graceful stop):
+           * default: 400 looping VUs for 30s (gracefulStop: 30s)
+
+
+     ✓ status was 200
+
+     checks.........................: 100.00% ✓ 27924      ✗ 0    
+     data_received..................: 7.0 MB  233 kB/s
+     data_sent......................: 4.2 MB  138 kB/s
+     http_req_blocked...............: avg=61.75µs  min=1µs     med=2µs      max=19.68ms p(90)=4µs      p(95)=5µs     
+     http_req_connecting............: avg=54.51µs  min=0s      med=0s       max=10.09ms p(90)=0s       p(95)=0s      
+     http_req_duration..............: avg=431.47ms min=50.73ms med=359.55ms max=1.75s   p(90)=731.2ms  p(95)=842.54ms
+       { expected_response:true }...: avg=431.47ms min=50.73ms med=359.55ms max=1.75s   p(90)=731.2ms  p(95)=842.54ms
+     http_req_failed................: 0.00%   ✓ 0          ✗ 27924
+     http_req_receiving.............: avg=43.62µs  min=17µs    med=38µs     max=661µs   p(90)=66µs     p(95)=79µs    
+     http_req_sending...............: avg=58.76µs  min=7µs     med=16µs     max=12.88ms p(90)=27µs     p(95)=35µs    
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s       max=0s      p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=431.36ms min=50.18ms med=359.48ms max=1.75s   p(90)=730.85ms p(95)=842.48ms
+     http_reqs......................: 27924   922.950308/s
+     iteration_duration.............: avg=431.63ms min=59.57ms med=359.68ms max=1.75s   p(90)=731.48ms p(95)=842.64ms
+     iterations.....................: 27924   922.950308/s
+     vus............................: 400     min=400      max=400
+     vus_max........................: 400     min=400      max=400
+
+
+running (0m30.3s), 000/400 VUs, 27924 complete and 0 interrupted iterations
+default ✓ [ 100% ] 400 VUs  30s

@@ -1,0 +1,39 @@
+
+          /\      |‾‾| /‾‾/   /‾‾/   
+     /\  /  \     |  |/  /   /  /    
+    /  \/    \    |     (   /   ‾‾\  
+   /          \   |  |\  \ |  (‾)  | 
+  / __________ \  |__| \__\ \_____/ .io
+
+  execution: local
+     script: k6-save.js
+     output: -
+
+  scenarios: (100.00%) 1 scenario, 400 max VUs, 1m0s max duration (incl. graceful stop):
+           * default: 400 looping VUs for 30s (gracefulStop: 30s)
+
+
+     ✗ status was 200
+      ↳  0% — ✓ 0 / ✗ 24074
+
+     checks.........................: 0.00%  ✓ 0          ✗ 24074
+     data_received..................: 3.4 MB 113 kB/s
+     data_sent......................: 3.6 MB 119 kB/s
+     http_req_blocked...............: avg=246.99µs min=1µs     med=2µs      max=101.96ms p(90)=4µs      p(95)=6µs     
+     http_req_connecting............: avg=242.55µs min=0s      med=0s       max=101.9ms  p(90)=0s       p(95)=0s      
+     http_req_duration..............: avg=501.41ms min=47.09ms med=439.63ms max=7.85s    p(90)=538.08ms p(95)=560.45ms
+       { expected_response:true }...: avg=501.41ms min=47.09ms med=439.63ms max=7.85s    p(90)=538.08ms p(95)=560.45ms
+     http_req_failed................: 0.00%  ✓ 0          ✗ 24074
+     http_req_receiving.............: avg=45.61µs  min=19µs    med=41µs     max=271µs    p(90)=70µs     p(95)=82µs    
+     http_req_sending...............: avg=24.38µs  min=7µs     med=18µs     max=3.42ms   p(90)=27µs     p(95)=35µs    
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s       max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=501.34ms min=46.79ms med=439.55ms max=7.85s    p(90)=538.02ms p(95)=560.37ms
+     http_reqs......................: 24074  791.896381/s
+     iteration_duration.............: avg=501.77ms min=48.79ms med=439.73ms max=7.95s    p(90)=538.21ms p(95)=560.59ms
+     iterations.....................: 24074  791.896381/s
+     vus............................: 400    min=400      max=400
+     vus_max........................: 400    min=400      max=400
+
+
+running (0m30.4s), 000/400 VUs, 24074 complete and 0 interrupted iterations
+default ✓ [ 100% ] 400 VUs  30s

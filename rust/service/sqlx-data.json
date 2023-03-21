@@ -1,0 +1,33 @@
+{
+  "db": "PostgreSQL",
+  "00d23fd81576f928a1c288be497f67f62dac60b0d793520aa54194bf3b5493fa": {
+    "describe": {
+      "columns": [
+        {
+          "name": "count",
+          "ordinal": 0,
+          "type_info": "Int8"
+        }
+      ],
+      "nullable": [
+        null
+      ],
+      "parameters": {
+        "Left": []
+      }
+    },
+    "query": "select count(id) from events"
+  },
+  "6a5ffc0b8dba30877c81e3d335a9bf34fe4c57782e18c628eeed6a5a2a2e38a1": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": [
+          "Varchar"
+        ]
+      }
+    },
+    "query": "insert into events(time) values ($1);"
+  }
+}
